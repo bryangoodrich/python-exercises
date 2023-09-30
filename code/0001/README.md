@@ -13,4 +13,4 @@ age,name,gender
 
 What change would you make? How would you make this process use less memory if the byte stream was, say, 1 TB in size? How would you convert this into a command line utility for easy sharing and reuse?
 
-<img src="../../static/0001.jpeg">
+<img src="../../static/0001.png">
