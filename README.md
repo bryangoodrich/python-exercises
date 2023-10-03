@@ -25,4 +25,11 @@ I'll try to maintain the list of topics that align to the code folders that cont
 4. Asynchronous
 5. Simple Linear Model
 6. Closures and Encapsulation
-7. 
+7. Spark setup
+8. Spark analytics
+9. Visualizing dataframes
+10. SparkML
+11. Confidence Intervals
+12. Closures and interfaces
+13. ?
+14. 
