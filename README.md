@@ -24,4 +24,5 @@ I'll try to maintain the list of topics that align to the code folders that cont
 3. Concurrency
 4. Asynchronous
 5. Simple Linear Model
-6. ...
+6. Closures and Encapsulation
+7. 
