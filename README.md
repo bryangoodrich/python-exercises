@@ -23,13 +23,18 @@ I'll try to maintain the list of topics that align to the code folders that cont
 2. Slicing
 3. Concurrency
 4. Asynchronous
-5. Simple Linear Model
-6. Closures and Encapsulation
-7. Spark setup
-8. Spark analytics
-9. Visualizing dataframes
-10. SparkML
-11. Confidence Intervals
-12. Closures and interfaces
-13. ?
-14. 
+5. (Statistics) Simple Linear Model
+6. (Programming) Closures and Encapsulation
+7. (Engineering) Spark setup
+8. (Analytics) Spark analytics
+9. (Data Viz) Visualizing dataframes
+10. (Data Science) SparkML
+11. (Statistics) Confidence Intervals
+12. (Programming) Closures and interfaces
+13. (Engineering) Package and orchestration
+14. (Analytics) Spatial data
+15. (Data Viz.) Mapping spatial data
+16. (Data Science) Spatial data modeling
+17. (Statistics) Spatial autocorrelation and correlogram
+18. (Programming) Monads intro
+19. (*)
