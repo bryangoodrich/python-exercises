@@ -1,3 +1,6 @@
+# github.com/bryangoodrich/python-exercises
+# code/0005/0005.py
+
 import pandas as pd
 from statsmodels.formula.api import ols
 

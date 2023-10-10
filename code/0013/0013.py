@@ -17,7 +17,7 @@ import time
 def main(args):
     parser = argparse.ArgumentParser(description='Load a job module to run.')
     parser.add_argument('--job', '-j', type=str, help='Name of the job module.')
-    args = parser.parse_args(sys.argv[1:])
+    args = parser.parse_args(args)
     if not args.job:
         parser.error('Please provide a module name using --job or -j.')
 
@@ -28,7 +28,7 @@ def main(args):
         end_time = time.time()
         print(f'Time taken: {end_time - start_time} seconds')
     except ModuleNotFoundError:
-        print(f"Module '{args.job}' not found in the 'package'.")
+        print(f"Module '{args.job}' not found in the 'packit'.")
 
 if __name__ == "__main__":
     args = sys.argv[1:]

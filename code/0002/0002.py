@@ -1,3 +1,4 @@
+# github.com/bryangoodrich/python-exercises
 # code/0002/0002.py
 sz = 3  # chunk size
 data = [1, 2, 3, 4, 5, 6, 7, 8]
