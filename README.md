@@ -32,9 +32,23 @@ I'll try to maintain the list of topics that align to the code folders that cont
 11. (Statistics) Confidence Intervals
 12. (Programming) Closures and interfaces
 13. (Engineering) Package and orchestration
-14. (Analytics) Spatial data
-15. (Data Viz.) Mapping spatial data
-16. (Data Science) Spatial data modeling
-17. (Statistics) Spatial autocorrelation and correlogram
+14. (Analytics) Missing values
+15. (Data Viz.) Data munging and facet plots
+16. (Data Science) Clustering
+17. (Statistics) Normality
 18. (Programming) Monads intro
 19. (*)
+20. (Engineering) Scheduling
+21. (Analytics) Schema validation
+22. (Data Viz) Mapping Basics
+23. (Data Science) More Clustering
+24. (Statistics) Autoregression?
+25. (Programming) Logging Monad
+26. (*)
+27. (Engineering) Logging
+28. (Analytics) ...
+29. (Data Viz) ...
+30. (Data Science) ...
+31. (Statistics) ...
+32. (Programming)
+33. (*) 
