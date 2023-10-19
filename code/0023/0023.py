@@ -35,8 +35,7 @@ gmm.fit(data)
 em_labels = gmm.predict(data)
 em_means = gmm.means_
 
-plt.figure(figsize=(12, 6))
-plt.subplot(1, 2, 1)
+plt.figure(figsize=(6, 6))
 plt.scatter(data[:, 0], data[:, 1], c=labels, 
     cmap="Dark2", alpha=0.4, edgecolor='k')
 plt.scatter(centroids[:, 0], centroids[:, 1], 
