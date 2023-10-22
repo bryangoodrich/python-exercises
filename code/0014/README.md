@@ -8,4 +8,4 @@ Would you like to see more advanced methods for imputing or filling missing valu
 
 # Output
 
-<img src="plog.png" />
+<img src="plot.png" />
