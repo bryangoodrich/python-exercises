@@ -54,4 +54,4 @@ I'll try to maintain the list of topics that align to the code folders that cont
 33. (*) 
 
 ## Posted to Python Community
-1, 5-9, 12, 13, 15, 16, 18, 19, 21
+1, 5-9, 12, 13, 15-19, 21
