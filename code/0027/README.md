@@ -5,7 +5,7 @@ The first 2 loggers are file loggers, but we control the formatting to write JSO
 What logging do you use? Do you want to see how to handle logging and metrics capture with other tools like LogStash or Prometheus? Let me know in the comments below!
 
 ------
-🗣 If you like this post, follow me for daily #python tips, and hit that like button so the algorithms help other’s see it, too. For full code and data on this and earlier exercises, visit https://www.github.com/bryangoodrich/python-exercises
+🗣 If you like this post, follow me for daily #python tips, and hit that like button so the algorithms help others see it, too. For full code and data on this and earlier exercises, visit https://www.github.com/bryangoodrich/python-exercises
 ------
 
 <img src="../../static/0027.png" />
