@@ -46,11 +46,11 @@ I'll try to maintain the list of topics that align to the code folders that cont
 25. (<span style="color:red">Programming</span>) Logging Monad
 26. (*)
 27. (<span style="color:#008080">Engineering</span>) Logging
-28. (<span style="color:yellow">Analytics</span>) ...
-29. (<span style="color:grey">Data Viz.</span>) ...
-30. (<span style="color:blue">Data Science</span>) ...
-31. (<span style="color:purple">Statistics</span>) ...
-32. (<span style="color:red">Programming</span>)
+28. (<span style="color:yellow">Analytics</span>) Data Quality Reporting
+29. (<span style="color:grey">Data Viz.</span>) Map Projections
+30. (<span style="color:blue">Data Science</span>) DBSCAN
+31. (<span style="color:purple">Statistics</span>) Bootstrapping and CLT
+32. (<span style="color:red">Programming</span>) ?
 33. (*) 
 
 ## Posted to Python Community
