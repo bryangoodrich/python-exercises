@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 non_normal_data = np.random.exponential(scale=1, size=1000)
 
-fig, axs = plt.subplots(1, 2, figsize=(12, 5))
+fig, axs = plt.subplots(2,1, figsize=(12.18, 6.27))
 axs[0].hist(non_normal_data, bins=30, density=True, color='orange', alpha=0.7)
 axs[0].set_xlabel('Non-Normal Data')
 axs[0].set_ylabel('Probability Density')
@@ -38,6 +38,7 @@ upper_bound = (1 + confidence_level) / 2 * 100
 confidence_interval = np.percentile(bootstrap_means, [lower_bound, upper_bound])
 axs[1].axvline(confidence_interval[0], color='blue', linestyle='dashed', linewidth=2, label='Lower Confidence Interval')
 axs[1].axvline(confidence_interval[1], color='blue', linestyle='dashed', linewidth=2, label='Upper Confidence Interval')
+axs[1].legend()
 
 plt.tight_layout()
 plt.savefig("plot.png")
