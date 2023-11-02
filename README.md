@@ -6,14 +6,13 @@ A collection of example, snippets, and exercises for being on top of your Python
 
 These topics will be posted about once-per-week. You will be able to identify them by the snippet background color listed below. These topics may change or restructure over time, but the initial design as of the time of this writing are below.
 
-1. Data engineering, platforms, and integrations
-2. Data analytics and modeling
-3. Data visualizations and mapping
-4. Data science, ML, and AI
-5. Statistics and methods
-6. Programming, paradigms
-7. Wildcard and personal 
-
+1. (Teal) Data engineering, platforms, and integrations
+2. (Yellow) Data analytics and modeling
+3. (Grey) Data visualizations and mapping
+4. (Blue) Data science, ML, and AI
+5. (Purple) Statistics and methods
+6. (Red) Programming, paradigms
+7. (Orange) Wildcard and personal 
 
 # Exercise Topics
 
