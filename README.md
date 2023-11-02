@@ -6,52 +6,49 @@ A collection of example, snippets, and exercises for being on top of your Python
 
 These topics will be posted about once-per-week. You will be able to identify them by the snippet background color listed below. These topics may change or restructure over time, but the initial design as of the time of this writing are below.
 
-1. (<span style="color:#008080">Teal</span>) Data engineering, platforms, and integrations
-2. (<span style="color:yellow">Yellow</span>) Data analytics and modeling
-3. (<span style="color:grey">Grey</span>) Data visualizations and mapping
-4. (<span style="color:blue">Blue</span>) Data science, ML, and AI
-5. (<span style="color:purple">Purple</span>) Statistics and methods
-6. ((<span style="color:red">Red</span>)) Programming, paradigms
-7. (<span style="color:orange">Orange</span>) Wildcard and personal 
+1. Data engineering, platforms, and integrations
+2. Data analytics and modeling
+3. Data visualizations and mapping
+4. Data science, ML, and AI
+5. Statistics and methods
+6. Programming, paradigms
+7. Wildcard and personal 
 
 
 # Exercise Topics
 
 I'll try to maintain the list of topics that align to the code folders that contain the scripts, any sample files used, and the README that contains the content posted to social media. 
 
-1. (<span style="color:red">Programming</span>) Context Managers
-2. (<span style="color:red">Programming</span>) Slicing
-3. (<span style="color:red">Programming</span>) Concurrency
-4. (<span style="color:red">Programming</span>) Asynchronous
-5. (<span style="color:purple">Statistics</span>) Simple Linear Model
-6. (<span style="color:red">Programming</span>) Closures and Encapsulation
-7. (<span style="color:#008080">Engineering</span>) Spark setup
-8. (<span style="color:yellow">Analytics</span>) Spark analytics
-9. (<span style="color:grey">Data Viz</span>) Visualizing dataframes
-10. (<span style="color:blue">Data Science</span>) SparkML
-11. (<span style="color:purple">Statistics</span>) Confidence Intervals
-12. (<span style="color:red">Programming</span>) Closures and interfaces
-13. (<span style="color:#008080">Engineering</span>) Package and orchestration
-14. (<span style="color:yellow">Analytics</span>) Missing values
-15. (<span style="color:grey">Data Viz.</span>) Data munging and facet plots
-16. (<span style="color:blue">Data Science</span>) Clustering
-17. (<span style="color:purple">Statistics</span>) Normality
-18. (<span style="color:red">Programming</span>) Monads intro
+1. Context Managers
+2. Slicing
+3. Concurrency
+4. Asynchronous
+5. Simple Linear Model
+6. Closures and Encapsulation
+7. Spark setup
+8. Spark analytics
+9. Visualizing dataframes
+10.SparkML
+11.Confidence Intervals
+12.Closures and interfaces
+13.Package and orchestration
+14.Missing values
+15.Data munging and facet plots
+16.Clustering
+17.Normality
+18.Monads intro
 19. (*)
-20. (<span style="color:#008080">Engineering</span>) Scheduling
-21. (<span style="color:yellow">Analytics</span>) Schema validation
-22. (<span style="color:grey">Data Viz.</span>) Mapping Basics
-23. (<span style="color:blue">Data Science</span>) More Clustering
-24. (<span style="color:purple">Statistics</span>) Autoregression?
-25. (<span style="color:red">Programming</span>) Logging Monad
+20.Scheduling
+21.Schema validation
+22.Mapping Basics
+23.More Clustering
+24.Autoregression?
+25.Logging Monad
 26. (*)
-27. (<span style="color:#008080">Engineering</span>) Logging
-28. (<span style="color:yellow">Analytics</span>) Data Quality Reporting
-29. (<span style="color:grey">Data Viz.</span>) Map Projections
-30. (<span style="color:blue">Data Science</span>) DBSCAN
-31. (<span style="color:purple">Statistics</span>) Bootstrapping and CLT
-32. (<span style="color:red">Programming</span>) ?
+27.Logging
+28.Data Quality Reporting
+29.Map Projections
+30.DBSCAN
+31.Bootstrapping and CLT
+32.?
 33. (*) 
-
-## Posted to Python Community
-1, 5-9, 12, 13, 15-19, 21
