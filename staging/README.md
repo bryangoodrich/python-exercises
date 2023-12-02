@@ -13,7 +13,6 @@ This way, I can prototype some ideas, spend more time refining them before they 
 1. Modularity and function definitions
 1. File handling and IO
 1. Standard library
-1. Packages and modules
 1. Azure integration
 1. S3 integration
 1. Kafka integration
