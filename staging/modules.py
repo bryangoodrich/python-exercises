@@ -2,15 +2,11 @@
 # ├── __init__.py
 # ├── subpack
 # │   ├── __init__.py
-# │   ├── __pycache__
-# │   │   ├── __init__.cpython-310.pyc
-# │   │   ├── barn.cpython-310.pyc
-# │   │   └── farm.cpython-310.pyc
 # │   ├── barn.py
 # │   └── farm.py
 # └── topmod.py
 # 
-# 2 directories, 8 files
+# 1 directories, 5 files
 
 import packit
 # Loading module topmod from package Packit ...
