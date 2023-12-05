@@ -9,7 +9,7 @@ class Barn:
     """ Class barn holds animals """
     def __init__(self, capacity, animals = None):
         self.capacity = capacity
-        self.stock = animals if not None else []
+        self.stock = animals if animals else []
 
     def fromlist(self, animals):
         """ Create a Barn from a list of animals """
