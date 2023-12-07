@@ -1,3 +1,4 @@
+# This cannot run in codespace ...
 import pygame
 import random
 
