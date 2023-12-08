@@ -10,11 +10,11 @@ class Barn:
     def __init__(self, capacity, animals = None):
         self.capacity = capacity
         self.stock = animals if animals else []
-
-    def fromlist(self, animals):
+    
+    @staticmethod
+    def fromlist(animals):
         """ Create a Barn from a list of animals """
-        self.capacity = len(animals)
-        self.stock = animals
+        return Barn(len(animals), animals)
 
     def add(self, animal):
         """ Add a single animal to your barn """
