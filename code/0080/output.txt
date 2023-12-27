@@ -1,0 +1,23 @@
+Sent: {'message': 0, 'data': {'device': 'sensor1', 'temp': 19.22.1560}}
+Sent: {'message': 1, 'data': {'device': 'sensor1', 'temp': 19.22.1560}}
+Sent: {'message': 2, 'data': {'device': 'sensor2', 'humidity': 70.5135}}
+Sent: {'message': 3, 'data': {'device': 'estimated', 'value': True}}
+Sent: {'message': 4, 'data': {'device': 'estimated', 'value': True}}
+Sent: {'message': 5, 'data': {'device': 'sensor1', 'temp': 19.22.1560}}
+Sent: {'message': 6, 'data': {'device': 'estimated', 'value': True}}
+Sent: {'message': 7, 'data': {'device': 'sensor2', 'humidity': 70.5135}}
+Sent: {'message': 8, 'data': {'device': 'sensor1', 'temp': 19.22.1560}}
+Sent: {'message': 9, 'data': {'device': 'sensor2', 'humidity': 70.5135}}
+
+[*] Waiting for messages. To exit press CTRL+C
+
+1 - b'{"message": 0, "data": {"device": "estimated", "value": true}}'
+2 - b'{"message": 1, "data": {"device": "estimated", "value": true}}'
+3 - b'{"message": 2, "data": {"device": "sensor2", "humidity": 70.5135}}'
+4 - b'{"message": 3, "data": {"device": "sensor1", "temp": 22.1560}}'
+5 - b'{"message": 4, "data": {"device": "sensor1", "temp": 22.1560}}'
+6 - b'{"message": 5, "data": {"device": "sensor2", "humidity": 70.5135}}'
+7 - b'{"message": 6, "data": {"device": "estimated", "value": true}}'
+8 - b'{"message": 7, "data": {"device": "estimated", "value": true}}'
+9 - b'{"message": 8, "data": {"device": "sensor1", "temp": 22.1560}}'
+10 - b'{"message": 9, "data": {"device": "sensor2", "humidity": 70.5135}}'
