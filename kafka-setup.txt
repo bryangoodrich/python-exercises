@@ -1,0 +1,111 @@
+sudo adduser kafka
+sudo adduser kafka sudo
+su -l kafka
+
+sudo curl "https://downloads.apache.org/kafka/3.6.1/kafka-3.6.1-src.tgz" -o /opt/kafka/kafka.tgz
+mkdir /opt/kafka && cd /home/kafka
+sudo tar -xvzf kafka.tgz --strip 1
+
+nano /opt/kafka/config/server.properties
+
+# Add to bottom
+# delete.topic.enable = true
+
+
+# Add logging directory
+log.dirs=/home/kafka/logs
+
+
+sudo nano /etc/systemd/system/zookeeper.service
+
+[Unit]
+Requires=network.target remote-fs.target
+After=network.target remote-fs.target
+
+[Service]
+Type=simple
+User=kafka
+ExecStart=/home/kafka/kafka/bin/zookeeper-server-start.sh /home/kafka/kafka/config/zookeeper.properties
+ExecStop=/home/kafka/kafka/bin/zookeeper-server-stop.sh
+Restart=on-abnormal
+
+[Install]
+WantedBy=multi-user.target
+
+sudo nano /etc/systemd/system/kafka.service
+
+[Unit]
+Requires=zookeeper.service
+After=zookeeper.service
+
+[Service]
+Type=simple
+User=kafka
+ExecStart=/bin/sh -c '/home/kafka/kafka/bin/kafka-server-start.sh /home/kafka/kafka/config/server.properties > /home/kafka/kafka/kafka.log 2>&1'
+ExecStop=/home/kafka/kafka/bin/kafka-server-stop.sh
+Restart=on-abnormal
+
+[Install]
+WantedBy=multi-user.target
+
+
+sudo nano /etc/init.d/kafka
+
+#!/bin/sh
+
+### BEGIN INIT INFO
+# Provides:          kafka
+# Required-Start:    $local_fs $network $named $syslog
+# Required-Stop:     $local_fs $network $named $syslog
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Kafka distributed streaming platform
+### END INIT INFO
+
+start() {
+  echo "Starting kafka"
+  # Start command from kafka.service
+  su kafka -c "/opt/kafka/kafka/bin/kafka-server-start.sh /opt/kafka/kafka/config/server.properties > /opt/kafka/kafka/kafka.log 2>&1"
+}
+
+stop() {
+  echo "Stopping kafka"
+  # Stop command 
+  /opt/kafka/kafka/bin/kafka-server-stop.sh  
+}
+
+case $1 in
+  start)
+    start
+    ;;
+  stop)  
+    stop
+    ;;
+  restart)
+    stop
+    start
+    ;;
+  *)
+    echo "Usage: $0 {start|stop|restart}"
+    exit 1
+    ;;
+esac
+
+exit 0
+
+
+sudo chown -R kafka:kafka /opt/kafka
+sudo chmod -R 755 /opt/kafka
+sudo service kafka start
+sudo /opt/kafka/gradlew jar -PscalaVersion=2.13.11
+
+# bin/zookeeper-server-start.sh config/zookeeper.properties
+# bin/kafka-server-start.sh config/server.properties
+
+bin/kafka-topics.sh --create --topic chat --bootstrap-server localhost:9092
+bin/kafka-console-producer.sh --topic chat --bootstrap-server localhost:9092
+bin/kafka-console-consumer.sh --topic quickstart-events --from-beginning --bootstrap-server localhost:9092
+
+rm -rf /tmp/kafka-logs /tmp/zookeeper /tmp/kraft-combined-logs
+
+
