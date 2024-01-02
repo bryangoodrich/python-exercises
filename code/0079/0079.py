@@ -4,8 +4,8 @@ from time import sleep
 import random
 
 mock = [
-    {'device': 'sensor1', 'temp': random.uniform(15, 25)},
-    {'device': 'sensor2', 'humidity': random.uniform(70, 80)},
+    {'device': 'sensor1', 'temp': round(random.uniform(15, 25), 4)},
+    {'device': 'sensor2', 'humidity': round(random.uniform(70, 80), 4)},
     {'device': 'estimated', 'value': random.choice([True, False])},
 ]
 
@@ -15,12 +15,12 @@ def producer():
     for i in range(10):
         message = {"message": i, "data": random.choice(mock)}
         data.put(message)
-        sleep(random.uniform(0.1, 0.5)) 
+        sleep(random.uniform(0.5, 1)) 
         print(f'Produced {message}')
 
 def consumer():
     while True:
-        sleep(random.uniform(0.4, 0.8)) 
+        sleep(random.uniform(0.75, 1.3)) 
         if data.empty():
             break
         message = data.get()

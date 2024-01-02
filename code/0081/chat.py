@@ -18,12 +18,13 @@ class ChatClient:
         msg = {'sender': self.username, 'message': message}
         self.producer.send(CHAT_TOPIC, json.dumps(msg).encode('utf-8'))
 
-    def poll_for_messages(self):
+    def poll_for_messages(self, width=60):
         for msg in self.consumer:
             data = json.loads(msg.value)
             sender = data['sender']
             if sender != self.username:
-                print(f"[{sender}] --> {data['message']}")
+                text = f"({data['message']}) <-- [{sender}]"
+                print(text.rjust(width))
 
     def run(self):
         self.poll_thread = Thread(target=self.poll_for_messages)

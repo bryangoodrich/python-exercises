@@ -32,7 +32,7 @@ if __name__ == '__main__':
     
     producer = KafkaProducer(bootstrap_servers=KAFKA_BROKER)
     for item in data:
-        time.sleep(5)
+        # time.sleep(1)
         record = json.dumps(item).encode('utf-8')
         producer.send(KAFKA_TOPIC, record)
         print(f"Writing {record}")

@@ -35,20 +35,20 @@ min15_stream = (min15
     .option("topic", "meters-15") 
     .start())
 
-min15_agg = (min15
-    .withColumn("ts", to_timestamp(col("endtime")))
-    .withColumn("hour", hour("ts"))
-    .withColumn("endtime", date_format("ts", "yyyy-MM-dd HH:00:00"))
-    .withWatermark("ts", "1 hour")
-    .groupBy("device", "hour", "endtime")
-    .agg(sum(col("kwh")).alias("kwh"))
-    .select("device", "hour", "endtime", "kwh")
-    .writeStream
-    .outputMode("append")
-    .format("kafka")
-    .option("kafka.bootstrap.servers", KAFKA_BROKER)
-    .option("topic", "meters-60")
-    .start())
+# min15_agg = (min15
+#     .withColumn("ts", to_timestamp(col("endtime")))
+#     .withColumn("hour", hour("ts"))
+#     .withColumn("endtime", date_format("ts", "yyyy-MM-dd HH:00:00"))
+#     .withWatermark("ts", "1 hour")
+#     .groupBy("device", "hour", "endtime")
+#     .agg(sum(col("kwh")).alias("kwh"))
+#     .select("device", "hour", "endtime", "kwh")
+#     .writeStream
+#     .outputMode("append")
+#     .format("kafka")
+#     .option("kafka.bootstrap.servers", KAFKA_BROKER)
+#     .option("topic", "meters-60")
+#     .start())
 
 hourly = (parsed
     .withColumn("hour", hour(to_timestamp(col("endtime"))))
