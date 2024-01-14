@@ -11,3 +11,24 @@ MINIO_VOLUMES="/mnt/data"
 
 
 sudo service minio start ?
+
+
+# SQL Server install (so easy!)
+curl https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
+curl -fsSL https://packages.microsoft.com/config/ubuntu/22.04/mssql-server-2022.list | sudo tee /etc/apt/sources.list.d/mssql-server-2022.list
+
+sudo apt-get update
+sudo apt-get install -y mssql-server
+
+sudo /opt/mssql/bin/mssql-conf setup
+
+sudo service mssql-server status
+
+
+# Polybase
+curl https://packages.microsoft.com/config/ubuntu/22.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
+sudo apt-get update
+sudo apt-get install mssql-server-polybase
+#sudo systemctl restart mssql-server
+sudo service mssql-server restart
+
