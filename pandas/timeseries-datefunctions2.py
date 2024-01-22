@@ -8,9 +8,11 @@
 #
 # It is really impressive how easy it is to do this. I'll continue exploring these time series features built into Pandas tomorrow!
 #
+# #datanalytics #datascience #dataengineering #machinelearning #devops
+# 
 # ------
 # 🗣 If you like this post, follow Bryan for daily #python tips, and hit that like button so the algorithms help others see it, too. 
-# 
+
 # For full code and data on this and other exercises, see https://www.github.com/bryangoodrich/python-exercises
 # ------
 import numpy as np
