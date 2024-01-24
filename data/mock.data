@@ -1,5 +1,3 @@
-name,dob,children
-Aaron,2001-01-02,0
-Beth,1990-02-03,2
-Chris,1988-03-04,1
-Derek,1979-04-05,0
+version https://git-lfs.github.com/spec/v1
+oid sha256:e31ea5d7367411abbe2cd86f764ccf118216b6e75605c22742c672f0aef84b53
+size 93
