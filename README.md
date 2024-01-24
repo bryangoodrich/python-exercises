@@ -2,16 +2,18 @@
 
 Let's do 100 Days of Python Together
 
-Originally, this repo started off as my daily python tips and tricks, and I cycled through various topics. These ranged from statistics and analysis to functional programming vs OOP and game programming. Some topics were covering python basics and the standard library while others were quite advanced, like talking about Monads.
+Originally, this repo started off as my daily python tips and tricks, and I cycled through various topics. These ranged from statistics and analysis to functional programming vs OOP and game programming. Some topics were covering python basics and the standard library while others were quite advanced, like talking about Monads. 
 
-### Direction
-
-I'll clean up this repo so all images for the 100 days under `/code` READMEs are correct. These README should follow the posts I did on [LinkedIn](https://www.linkedin.com/in/bryangoodrich). My codespace had to install a number of technologies to support various explorations. I'll keep these text documents that helped me setup and configure them in `/notes`. The `/packit` library was used to demonstrate package management. I may retrofit the earlier examples to use and reference content in the `/data` folder where all data can be managed centrally. I tried to make each day folder independent, but then some data sets were just useful enough to reuse across many days. 
+The 100 days is complete, `data/` and `static/` have been moved to GitHub LFS for storage, and the `code/` folder contains all 100 days 001 - 100. All data references are to the data folder now, unless I messed something up. I may have gotten lazy and some images may not render correctly in a day's README.md file. I appreciate any issue reports that help me catch these issues!
 
 ### Future
 
-I'm stopping this repo after the 100 days for the `/code` folder. However, I will continue a new series here under the `/pandas` folder that will have topical content about how to use Pandas. I grew up in my data science career using R, so having spent the last several years doing data engineering in Python, I have quite a learning curve to get back to my former glory. I know what I'm doing, I just don't always know how to achieve it! I hope my Daily Panda posts, while smaller and focused, prove to help others achieve their Python goals. 
+The `pandas/` folder will contain the ongoing Daily Pandas series where I take very short bites of learning Pandas and its integrations with geopanas, matplotlib, statistics, and machine learning. 
 
-I am also going to begin a Python Basics course where I'll creae small training videos on using Python from the ground up. I haven't quite figured out the structure and layout, nor how to even properly record and edit such videos. But I'll aim to simulcast these on Threads (bryangoodrich.xyz) and YouTube (TBD). Who knows, maybe I'll get into the whole Shorts thing and start doing TikToks as well 😂 
+I'm ramping up a Python Basics course where I'll cover the grassroots Python topics so you can understand how to become a Python developer from first principals, as a previous developer or not, and go at your own pace learning-by-doing. These will be shared on YouTube and social media (TBD).
 
-In any case, I'll try to leave some code and information here under an upcoming `/basics` folder that will at least keep a list of my training videos, any code used, and maybe some supporting documentation. Who knows, maybe this will grow into something valuable? 🤷 I'm excited to continue teaching others, because I love this language and seeing others thrive using it, but also because the best way to learn for myself is to teach others. So keep on this journey with me and grow together 💪
+My advanced topics will continue as personal projects I'll host on my old, and unused, substack at https://bryangoodrich.substack.com. Please join me there if you're interested in advanced projects where I'll work through fully engineered MLOps and data science solutions or data engineering solutions and services. These will also be all consolidated on my website when I finally get that developed to par. 
+
+### Contact 
+
+As always, I appreciate any feedback. Submit issues here or any pull requests if you want to contribute directly. I've no standards on this yet, but I'll appreciate any support. Hit me up on LinkedIn at bryangoodrich or Threads @bryangoodrich.xyz. My GitHub email is posted here, but it's basically a spam filter unless something significant does some through. Use at your own risk!
