@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from statsmodels.tsa.holtwinters import ExponentialSmoothing
 
-source_file = "../0035/data/DEOK_hourly.csv"
+source_file = "data/utilities/DEOK_hourly.csv"
 names = ["read_dt", "read_mw"]
 is_summer = "read_dt >= '2012-05-01' and read_dt < '2012-08-31'"
 df = (pd.read_csv(source_file, header=0, names=names,

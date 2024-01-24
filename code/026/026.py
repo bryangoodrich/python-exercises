@@ -1,6 +1,3 @@
-# github.com/bryangoodrich/python-exercises
-# code/0026/0026.py
-
 import random
 import sqlite3
 from subprocess import run as cmd

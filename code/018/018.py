@@ -1,6 +1,3 @@
-# github.com/bryangoodrich/python-exercises
-# code/0018/0018.py
-
 class Maybe:
     def __init__(self, value):
         self.value = value

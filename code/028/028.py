@@ -1,6 +1,3 @@
-# github.com/bryangoodrich/python-exercises
-# code/0028/0028.py
-
 import pandas as pd
 
 def evaluate_dq(data, column_level=True):

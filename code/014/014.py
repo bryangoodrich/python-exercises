@@ -1,6 +1,3 @@
-# github.com/bryangoodrich/python-exercises
-# code/0014/0014.py
-
 import pandas as pd
 import matplotlib.pyplot as plt
 

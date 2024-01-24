@@ -1,6 +1,3 @@
-# github.com/bryangoodrich/python-exercises
-# code/0024/0024.py
-
 import pandas as pd
 import statsmodels.api as sm
 import statsmodels.tsa.ar_model as tsa
@@ -8,7 +5,7 @@ import statsmodels.tsa.ar_model as tsa
 remove_dollar_sign = lambda v: float(v.replace('$', '').replace(',', ''))
 
 url = "https://code.datasciencedojo.com/datasciencedojo/datasets/raw/master/Dow%20Jones%20Index/dow_jones_index.data"
-raw = pd.read_csv("dow_jones_index.data", converters={"close": remove_dollar_sign})
+raw = pd.read_csv("data/dow_jones_index.data", converters={"close": remove_dollar_sign})
 raw['ar1'] = raw.close.shift(1)
 data = sm.add_constant(raw.dropna())  # AutoReg can do this for you!
 X = sm.add_constant(data[['volume', 'ar1']])

@@ -1,6 +1,3 @@
-# github.com/bryangoodrich/python-exercises
-# code/0015/0015.py
-
 import seaborn as sns
 import matplotlib.pyplot as plt
 import pandas as pd

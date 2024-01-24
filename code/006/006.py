@@ -1,6 +1,3 @@
-# github.com/bryangoodrich/python-exercises
-# code/0006/0006.py
-
 def use_state(initial_state):
     state = initial_state
 

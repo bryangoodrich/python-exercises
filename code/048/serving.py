@@ -12,7 +12,7 @@ app = FastAPI()
 @app.get('/data/{site}')
 def get_data(site: str):
    batch = (pq
-      .read_table("batch_data.parquet")
+      .read_table("data/batch_data.parquet")
       .to_pandas()
       .query(f"site == '{site}'"))
    bytestr = db.get('streaming_data')

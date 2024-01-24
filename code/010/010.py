@@ -1,13 +1,10 @@
-# github.com/bryangoodrich/python-exercises
-# code/0010/0010.py
-
 import matplotlib.pyplot as plt
 from pyspark.sql import SparkSession
 from pyspark.ml.regression import LinearRegression
 from pyspark.ml.feature import VectorAssembler
 
 spark = SparkSession.builder.getOrCreate()
-df = spark.read.parquet("data.parquet")
+df = spark.read.parquet("data/energy-usage.parquet")
 my_assembler = VectorAssembler(inputCols=["cdd"], outputCol="feature")
 features = my_assembler.transform(df)
 model = LinearRegression(featuresCol="feature", labelCol="kwh").fit(features)

@@ -5,9 +5,9 @@ num_vectors, dim = (10, 64)
 data = np.random.random((num_vectors, dim)).astype('float32')
 index = faiss.IndexFlatL2(dim)  # L2 distance is used
 index.add(data)
-faiss.write_index(index, "index.faiss")
+faiss.write_index(index, "data/index.faiss")
 
-index = faiss.read_index("index.faiss")
+index = faiss.read_index("data/index.faiss")
 query_vector = np.random.random((1, dim)).astype('float32')
 distances, indices = index.search(query_vector, 3)
 nearest_3 = zip(distances[0], indices[0])

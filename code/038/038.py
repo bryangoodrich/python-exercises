@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 names = ["read_dt", "read_mw"]
 is_summer = "read_dt >= '2012-05-01' and read_dt < '2012-08-31'"
 df = (pd
-    .read_csv("../0035/data/DEOK_hourly.csv", 
+    .read_csv("data/utilities/DEOK_hourly.csv", 
         header=0,
         names=names,
         parse_dates=['read_dt'])

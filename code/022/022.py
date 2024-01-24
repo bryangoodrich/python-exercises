@@ -1,5 +1,3 @@
-# github.com/bryangoodrich/python-exercises
-# code/0022/0022.py
 import pandas as pd
 import requests
 import plotly.express as px

@@ -16,7 +16,7 @@ def gen_samples(df, cols, var, window=24*7, shift=24):
 
 site = 'DEOK'
 years = (2016, 2017)
-src = pq.read_table("data/data.parquet").to_pandas()
+src = pq.read_table("data/utilities.parquet").to_pandas()
 
 df = src[src.site == site]
 df = pd.melt(df, 

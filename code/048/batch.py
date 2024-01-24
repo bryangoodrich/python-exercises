@@ -12,8 +12,8 @@ def reader(fh):
     df['site'] = site
     return df
 
-data_dir = "../0035/data"
+data_dir = "data/utilities"
 files = os.listdir(data_dir)
 dfs = (reader(f"{data_dir}/{file}") for file in files)
 batch_data = pd.concat(dfs, ignore_index=True)
-batch_data.to_parquet('batch_data.parquet')
+batch_data.to_parquet('data/batch_data.parquet')

@@ -1,5 +1,3 @@
-# github.com/bryangoodrich/python-exercises
-# code/0021/0021.py
 import pandas as pd
 import pandera as pa
 
@@ -13,7 +11,7 @@ schema = pa.DataFrameSchema({
 })
 
 try:
-    df = pd.read_csv("rides.csv")
+    df = pd.read_csv("data/rides.csv")
     schema.validate(df)
 except pa.errors.SchemaError as e:
     print(e)

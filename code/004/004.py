@@ -1,5 +1,3 @@
-# github.com/bryangoodrich/python-exercises
-# code/0004/0004.py
 import random
 import asyncio
 

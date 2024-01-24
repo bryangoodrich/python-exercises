@@ -1,5 +1,3 @@
-# github.com/bryangoodrich/python-exercises
-# code/0003/0003.py
 import concurrent.futures
 import random
 import time

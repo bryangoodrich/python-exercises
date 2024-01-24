@@ -1,6 +1,6 @@
 import pandas as pd
 
-workbook = "data.xlsx"
+workbook = "data/linkedin.xlsx"
 sheet = "Data"
 id_vars = ["Post", "Category"]
 

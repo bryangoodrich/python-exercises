@@ -1,6 +1,3 @@
-# github.com/bryangoodrich/python-exercises
-# code/0012/0012.py
-
 def sum_total(id):
     data = [0]
     def update(value):

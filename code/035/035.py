@@ -14,7 +14,7 @@ def reader(fh):
     df['site'] = site
     return df
 
-files = os.listdir("data")
+files = os.listdir("data/utilities")
 dfs = (reader(os.path.join("data", file)) for file in files)
 combined = pd.concat(dfs, ignore_index=True)
 combined.drop("read_dt", axis=1, inplace=True)
@@ -29,4 +29,4 @@ df = (combined
 df.columns = [f'hour{hour:02}' for hour in df.columns]
 df = df.reset_index()
 
-write_table(Table.from_pandas(df), 'data.parquet')
+write_table(Table.from_pandas(df), 'data/utilities.parquet')

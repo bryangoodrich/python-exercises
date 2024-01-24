@@ -3,7 +3,7 @@ import statsmodels.api as sm
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-df = pd.read_csv("data.csv")
+df = pd.read_csv("data/housing.csv")
 df['price'] = df.price / 1000
 df['sea_view'] = df.view.apply(lambda x: int(x == 'Sea view'))
 

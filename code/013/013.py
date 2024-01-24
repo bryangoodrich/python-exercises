@@ -1,5 +1,3 @@
-# github.com/bryangoodrich/python-exercises
-# code/0013/0013.py
 # python 0013.py -j incorrect_input
 #   usage: 0013.py [-h] [--job JOB]
 #   0013.py: error: Please provide a module name using --job or -j.
@@ -22,13 +20,13 @@ def main(args):
         parser.error('Please provide a module name using --job or -j.')
 
     try:
-        job_module = importlib.import_module(f'packit.{args.job}')
+        job_module = importlib.import_module(f'runmepackage.{args.job}')
         start_time = time.time()
         job_module.run()
         end_time = time.time()
         print(f'Time taken: {end_time - start_time} seconds')
     except ModuleNotFoundError:
-        print(f"Module '{args.job}' not found in the 'packit'.")
+        print(f"Module '{args.job}' not found in the 'runmepackage'.")
 
 if __name__ == "__main__":
     args = sys.argv[1:]

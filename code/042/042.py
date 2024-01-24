@@ -6,7 +6,7 @@ indicators = ["balance_frequency", "purchases_frequency",
     "oneoff_purchases_frequency", "purchases_installments_frequency",
     "cash_advance_frequency"]
 
-df = pd.read_csv("data.csv")
+df = pd.read_csv("data/shopping.csv")
 df.columns = df.columns.str.lower()
 values = df.drop(columns=indicators + ["cust_id"])
 corr = values.corr(method='kendall')

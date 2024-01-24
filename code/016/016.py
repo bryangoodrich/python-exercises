@@ -1,6 +1,3 @@
-# github.com/bryangoodrich/python-exercises
-# code/0016/0016.py
-
 import pandas as pd
 from sklearn.cluster import KMeans
 from sklearn.preprocessing import StandardScaler, MinMaxScaler

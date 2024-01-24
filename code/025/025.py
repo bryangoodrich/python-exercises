@@ -1,6 +1,3 @@
-# github.com/bryangoodrich/python-exercises
-# code/0025/0025.py
-
 class Writer:
     def __init__(self, value, log=None):
         self.value = value

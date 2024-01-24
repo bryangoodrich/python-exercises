@@ -1,3 +1,4 @@
+# Data removed from repo; too damn big
 from collections import Counter
 from nltk.corpus import stopwords
 

@@ -1,6 +1,6 @@
 # Usage
 #
-# python 0068.py Bryan
+# python 068.py Bryan
 # Hello, Bryan!
 
 def main(name):

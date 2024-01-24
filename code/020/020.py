@@ -1,5 +1,3 @@
-# github.com/bryangoodrich/python-exercises
-# code/0019/0019.py
 import threading
 import time
 import schedule

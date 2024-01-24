@@ -4,7 +4,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 from matplotlib.dates import MonthLocator, DateFormatter
 
-src = pq.read_table("data.parquet").to_pandas()
+src = pq.read_table("data/utilities.parquet").to_pandas()
 src['read_date'] = pd.to_datetime(src.read_date)
 site = 'DEOK'
 year = 2016

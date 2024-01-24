@@ -1,6 +1,3 @@
-# github.com/bryangoodrich/python-exercises
-# code/0017/0017.py
-
 # %% Imports
 import matplotlib.pyplot as plt
 from statsmodels.formula.api import ols

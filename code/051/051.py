@@ -5,7 +5,7 @@ import numpy as np
 SIZE = 128
 NUM_RESULTS = 5
 
-classes = np.array(open('ImageNetLabels.txt').read().splitlines())
+classes = np.array(open('data/ImageNetLabels.txt').read().splitlines())
 
 image = tf.io.read_file('dog.jpg')
 image = tf.image.decode_jpeg(image)

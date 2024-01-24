@@ -9,7 +9,7 @@ SITE = "DEOK"
 SAMPLE_SIZE=1000
 STATE = 42
 df = (pq
-    .read_table("../0036/data.parquet")
+    .read_table("data/utilities.parquet")
     .to_pandas()
     .query("site == @SITE")
     .dropna()

@@ -1,13 +1,10 @@
-# github.com/bryangoodrich/python-exercises
-# code/0008/0008.py
-
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import sum, round, col, lit
 
 spark = SparkSession.builder.getOrCreate()
 
-usage_hourly = spark.read.csv("usage.csv", header=True, inferSchema=True)
-weather = spark.read.csv("weather.csv", header=True, inferSchema=True)
+usage_hourly = spark.read.csv("data/usage.csv", header=True, inferSchema=True)
+weather = spark.read.csv("data/weather.csv", header=True, inferSchema=True)
 
 kwh = round(sum("kwh"), 2).alias("kwh")
 cdd = round(col("avg") - lit(65), 2).alias("cdd")

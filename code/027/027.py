@@ -1,6 +1,3 @@
-# github.com/bryangoodrich/python-exercises
-# code/0027/0027.py
-
 import logging
 import requests
 

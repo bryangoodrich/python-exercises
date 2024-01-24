@@ -1,10 +1,7 @@
-# github.com/bryangoodrich/python-exercises
-# code/0011/0011.py
-
 import pandas as pd
 from statsmodels.formula.api import ols
 
-df = pd.read_csv("data.csv")
+df = pd.read_csv("data/energy-usage.csv")
 model = ols("kwh ~ cdd", data=df).fit()
 
 model.params["cdd"]

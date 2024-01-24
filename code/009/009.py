@@ -1,12 +1,9 @@
-# github.com/bryangoodrich/python-exercises
-# code/0009/0009.py
-
 from pyspark.sql import SparkSession
 import matplotlib.pyplot as plt
 from matplotlib.ticker import StrMethodFormatter
 
 spark = SparkSession.builder.getOrCreate()
-data = spark.read.parquet("data")
+data = spark.read.parquet("data/parquet_files")
 df = data.toPandas()
 df.kwh.corr(df.cdd)  # 0.815
 

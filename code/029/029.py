@@ -4,7 +4,7 @@ import contextily as ctx
 
 OSM = ctx.providers.OpenStreetMap.Mapnik
 
-df = gpd.read_file("parksandrecs.geojson")
+df = gpd.read_file("data/parksandrecs.geojson")
 # 0    POINT (-121.38490 38.56548)
 # 1    POINT (-121.38436 38.56526)
 # 2    POINT (-121.38360 38.56522)
