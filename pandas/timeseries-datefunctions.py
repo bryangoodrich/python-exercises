@@ -146,7 +146,13 @@ pd.offsets.FY5253Quarter().kwds
 
 # 🐍 Daily Pandas 🐼
 #
-# 
+# After seeing how offsets work, I revisited the resampling methods where you can do some strange things.
+#
+# With the W specifier, we can get weekly resampling (aggregation), but we can also tell it what the start of the week is with W-MON.
+#
+# But notice I pull the first observed weekday name, which is the Tuesday value, and in the weekly aggregate the date listed is the next Monday!
+#
+# So in a very important way, the aggregate timestamp is really "as of the end of the period." 
 # 
 # #datanalytics #datascience #dataengineering #machinelearning #devops
 # 
@@ -155,5 +161,42 @@ pd.offsets.FY5253Quarter().kwds
 #
 # 💻 For full code and data on this and other exercises, see https://www.github.com/bryangoodrich/python-exercises
 # ------
+# Reference: https://machinelearningtutorials.org/python-pandas-data-offsets-with-examples/
 
+import numpy as np
+import pandas as pd
 
+dates = pd.date_range(
+    start='2024-01-01',
+    end='2024-01-31',
+    freq='D')
+
+data = np.random.randint(0, 100, size=len(dates))
+
+df = pd.DataFrame({
+    'date': dates, 
+    'value': data,
+    'weekday': dates.day_name()
+})
+#          date  value    weekday
+# 0  2024-01-01     18     Monday
+# 1  2024-01-02     87    Tuesday
+# 2  2024-01-03     82  Wednesday
+# 3  2024-01-04     83   Thursday
+# 4  2024-01-05     41     Friday
+# 5  2024-01-06     99   Saturday
+# 6  2024-01-07     92     Sunday
+# 7  2024-01-08     22     Monday
+# 8  2024-01-09     24    Tuesday
+
+aggregation = {"value": "sum", "weekday": "first"}
+weekly = df.resample('W', on='date').agg(aggregation).reset_index()
+#         date  value  weekday
+# 0 2024-01-01     18   Monday
+# 1 2024-01-08    506  Tuesday  <- 87+82+83+41+99+92+22
+# 2 2024-01-15    370  Tuesday
+# 3 2024-01-22    291  Tuesday
+# 4 2024-01-29    330  Tuesday
+# 5 2024-02-05    140  Tuesday
+
+weekly.date.dt.day_name()  # All Monday!
