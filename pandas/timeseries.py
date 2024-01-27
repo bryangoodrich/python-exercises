@@ -279,3 +279,55 @@ df.loc["2024-01"]
 #             costs  sales
 # 2024-01-05    100     39
 # 2024-01-19    200    945
+
+
+
+# 🐍 Daily Pandas 🐼
+#
+# If you want to look at the first, last, min, and max of a period of time, what is known as the open, high, low, close (OHLC) in stock circles, then look no further!
+#
+# Pandas resample lets you aggregate with .ohlc as shown here. I make up some random minute data and show how easy we can simulate stock candles by resample aggregating to 5 minute, hourly, or daily, very succinctly.
+#
+# #datanalytics #datascience #dataengineering #machinelearning #devops
+#
+# ------
+# 🗣 Follow Bryan for more daily #python tips and smash that like button! 💥
+#
+# 💻 Full repo https://www.github.com/bryangoodrich/python-exercises 👀
+# ------
+# Reference: https://pandas.pydata.org/pandas-docs/stable/user_guide/timeseries.html
+
+import pandas as pd
+import numpy as np
+
+dates = pd.bdate_range('2024-01-01', '2024-01-15', freq="T")  # Mon-Fri series
+ts = pd.Series(np.random.randint(0, 500, len(dates)), index=dates)
+# 2024-01-01 00:00:00    109
+# 2024-01-01 00:01:00     69
+# 2024-01-01 00:02:00    133
+# 2024-01-01 00:03:00    266
+# 2024-01-01 00:04:00     57
+
+ts.resample("5min").ohlc()
+#                      open  high  low  close
+# 2024-01-01 00:00:00   109   266   57     57
+# 2024-01-01 00:05:00   445   445   83    253
+# 2024-01-01 00:10:00   392   475  107    107
+# 2024-01-01 00:15:00   194   396   64     64
+# 2024-01-01 00:20:00   200   478    4    172
+
+ts.resample("1H").ohlc()
+#                      open  high  low  close
+# 2024-01-01 00:00:00   109   496    4     29
+# 2024-01-01 01:00:00   158   493   15     33
+# 2024-01-01 02:00:00   496   496    3    352
+# 2024-01-01 03:00:00   323   490   12    312
+# 2024-01-01 04:00:00   262   493    4      4
+
+ts.reample("1D").ohlc()
+#             open  high  low  close
+# 2024-01-01   109   499    0    444
+# 2024-01-02   116   499    0    486
+# 2024-01-03   316   499    0     11
+# 2024-01-04   196   499    0    320
+# 2024-01-05   431   498    0    343
