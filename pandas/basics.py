@@ -59,3 +59,63 @@ with pd.option_context("mode.copy_on_write", True):
     df.replace({"Grades": {98: 88}}, inplace=True)  # Will also replace
     df['Grades'] = df['Grades'].replace(98, 88)  # Will change by replacement!
     df
+
+
+# 🐍 Daily Pandas 🐼
+#
+# It can be struggling to understand how to build custom aggregation functions for grouped data. But reading the documentation helped show me some examples that can make it intuitive.
+#
+# By working with the grouped object itself, we can pull out the name of the group value and the dataframe of its subset directly to see what a group contains.
+#
+# When we think of it as just this, a labeled dataframe you can literally pull out and look at, you can prototype and build out a function that aggregates this exactly how you want it.
+#
+# You can also call some useful aggregate functions like grouped.size() to get tallys per group or grouped.describe() to get a quick per-group summary!
+# 
+# #datanalytics #datascience #dataengineering #machinelearning #devops
+#
+# ------
+# 🗣 Follow Bryan for more daily #python tips and smash that like button! 💥
+#
+# 💻 Full repo https://www.github.com/bryangoodrich/python-exercises 👀
+# ------
+# References: https://pandas.pydata.org/pandas-docs/stable/user_guide/groupby.html
+
+import pandas as pd
+from numpy.random import randint
+
+dates = pd.date_range('2024-01-01', '2024-03-31')
+values = randint(0, 100, len(dates))
+df = pd.DataFrame({'Value': values}, index=dates) 
+df["weekday"] = df.index.day_name()
+
+grouped = df.groupby("weekday")
+for name, group in grouped:
+    print(name)
+    print(group)
+    # Friday
+    #             Value weekday
+    # 2024-01-05     80  Friday
+    # 2024-01-12     79  Friday
+    # ...
+    # 2024-03-22     56  Friday
+    # 2024-03-29     80  Friday
+    #
+    # Monday
+    #             Value weekday
+    # 2024-01-01     40  Monday
+    # 2024-01-08     12  Monday
+    # ...
+    # 2024-03-18     59  Monday
+    # 2024-03-25     71  Monday
+
+grouped.describe()
+#           Value                                                    
+#           count       mean        std   min   25%   50%   75%   max
+# weekday                                                            
+# Friday     13.0  57.538462  25.976321  20.0  32.0  62.0  80.0  95.0
+# Monday     13.0  46.692308  29.349573  10.0  12.0  48.0  71.0  99.0
+# Saturday   13.0  33.538462  24.649596   0.0  24.0  31.0  34.0  87.0
+# Sunday     13.0  48.538462  14.454615  24.0  38.0  47.0  59.0  77.0
+# Thursday   13.0  35.000000  25.897233   1.0  23.0  27.0  46.0  88.0
+# Tuesday    13.0  49.384615  36.280248   3.0  13.0  56.0  86.0  96.0
+# Wednesday  13.0  33.307692  26.995014   0.0  12.0  37.0  49.0  85.0
