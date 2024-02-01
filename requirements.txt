@@ -199,7 +199,6 @@ pyglet==2.0.10
 Pygments==2.16.1
 pyparsing==3.1.1
 PyPDF2==3.0.1
-pyppeteer==1.0.2
 pyproj==3.6.1
 pyshp==2.3.1
 PySocks==1.7.1
