@@ -119,3 +119,51 @@ grouped.describe()
 # Thursday   13.0  35.000000  25.897233   1.0  23.0  27.0  46.0  88.0
 # Tuesday    13.0  49.384615  36.280248   3.0  13.0  56.0  86.0  96.0
 # Wednesday  13.0  33.307692  26.995014   0.0  12.0  37.0  49.0  85.0
+
+
+# 🐍 Daily Pandas 🐼
+#
+# Some folks find the filtering syntax of Pandas to be a pain (me included!) and would just like to "write SQL." If Spark can do it, why can't Pandas, huh??
+#
+# In any case, at least filtering can be made EZ as this example shows! You can also handle parameters in the where clause by putting the at symbol before the variable name in the clause. 
+#
+# I also think it's cleaner than the standard Pandas syntax when you start doing AND and OR clauses in your filters! 
+#
+# What do you think?
+#
+# #datanalytics #datascience #dataengineering #machinelearning #devops
+#
+# ------
+# 🗣 Follow Bryan for more daily #python tips and smash that like button! 💥
+#
+# 💻 Full repo https://www.github.com/bryangoodrich/python-exercises 👀
+# ------
+
+import pandas as pd
+import numpy as np
+
+df = pd.DataFrame({
+    "CityCode": np.random.randint(50, 100, 1000),
+    "Population": np.random.randint(400000, 650000, 1000)
+})
+
+code = 97
+df[df.CityCode == code]  # 25 rows
+#      CityCode  Population
+# 0          97      479137
+# 70         97      508864
+# 143        97      500836
+# 268        97      558082
+# 386        97      607198
+# ...
+
+df.query("CityCode == @code")  # 25 rows
+#      CityCode  Population
+# 0          97      479137
+# 70         97      508864
+# 143        97      500836
+# 268        97      558082
+# 386        97      607198
+# ...
+
+df.query("CityCode == @code OR CityCode < 52")  # 68 rows
